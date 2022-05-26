@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Masai Calculator using Grid</title>
+        <style>
+            
+            h1{
+            color: teal;
+            text-align: center;
+            font-size: 50px;
+            }
+            #container{
+                border: 1px solid transparent;
+                width: 30%;
+                height: 500px;
+                margin: auto;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                font-weight: bold;
+                font-size: 20px;
+                
+            }
+            #display{
+                border: 1px solid transparent;
+                width: 85%;
+                height: 15%;
+                margin: auto;
+                margin-top: 15px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 20px;
+            }
+            #key{
+                border: 1px solid transparent;
+                width: 85%;
+                height: 75%;
+                margin: auto;
+                margin-top: 25px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(4,70px);
+                gap: 15px;
+                
+                border-radius: 20px;
+                
+
+
+                }
+            #key>div{
+                border: 1px blue transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 20px;
+            }
+            #key>div:hover{
+                background-color: grey;
+                cursor: pointer;
+            }
+            .black{
+                background-color: black;
+                color: white;
+            }
+            .red{
+                background-color: red;
+                color: white;
+            }
+
+            
+
+        </style>
+    </head>
+    <h1>Masai Calculator</h1>
+    <div id="container">
+        <div id="display"></div>
+        <div id="key">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="black">+</div>
+            <div >4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="black">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="black">X</div>
+            <div class="red">C</div>
+            <div>0</div>
+            <div class="black">=</div>
+            <div class="black">/</div>
+        </div>
+
+    </div>
+    <body>
+        
+    </body>
+    </html>
