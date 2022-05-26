@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+     
       #heading{
-        
         width: 45%;
         margin: auto;
         margin-bottom: 50px;
-        
       }
       #heading>h1{
         font-size: 55px;
@@ -23,22 +22,23 @@
         color: grey;
       }
       #cards-section{
-        
-        height: 100%;
-        width: 70%;
+        /* height: 500px; */
+        width: 60%;
         margin: auto;
-        display: flex;
-        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 450px;
+        gap: 20px;
       }
       #cards-section>div{
-        
-        height: 100%;
-        width: 30%;
-        margin: auto;
         text-align: center;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 30px;
+        
       }
+      
+       
+      
       #cards-section>div>p+p{
         font-size: 22px;
         line-height: 30px;
@@ -61,12 +61,42 @@
         color: blue;
         background-color: transparent;
         padding: 10px;
-        border: 1px solid blue;
         border-radius: 10px;
         font-size: 25px;
         padding: 20px 40px 20px 40px;
         margin-bottom: 40px;
       }
+      @media all and (min-width:480px) and (max-width: 720px){
+        #cards-section{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        gap: 20px;
+        
+      }
+      #heading{
+        width: 100%;
+        /* margin: auto; */
+        /* margin-bottom: 50px; */
+      }
+      }
+      @media all and (min-width:320px) and (max-width: 479px){
+        #cards-section{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(3,auto);
+        gap: 20px;
+        
+      }
+      #heading{
+        width: 100%;
+        /* margin: auto; */
+        /* margin-bottom: 50px; */
+      }
+      }
+      
 
     </style>
   </head>
