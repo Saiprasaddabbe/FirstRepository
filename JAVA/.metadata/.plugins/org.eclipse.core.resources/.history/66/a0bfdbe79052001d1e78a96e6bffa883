@@ -1,0 +1,22 @@
+package com.masai.demo;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import com.masai.utility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+		
+		em.close();
+
+	}
+
+}

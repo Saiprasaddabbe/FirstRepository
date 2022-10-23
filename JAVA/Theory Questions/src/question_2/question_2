@@ -1,0 +1,53 @@
+● Explain difference between JPA and Hibernate.
+->
+JPA:-
+1.JPA is API specifications.
+2.JPA define the management ofrelaional data in the java applictions.
+3.is is defined in javax.persistence package.
+4.The EntityManagerfactory interface is used to interract with entity,
+manage factory for the persistence unit, thus is provides an entity manager.
+5.it uses Java persistence  query language(JPQL)
+as a object oriented query language. to perform database operation.
+
+HIBERNATE:-
+1.Hibernate is a framework and one of the implementation f JPA.
+2.Hibernate is the one of the ORM tool. Which is used to save the state
+of java object into database.
+3.it is defined in org.hibermate package.
+4.it used Session Factory Interface.
+5.it Uses Hibernatequery Language(HQL),
+as a object oriented query languae to perform data base operation.
+
+● Explain the Life-cycle of Entity class with example.
+-->
+three state of hiberate lifecycle:
+
+1.Transient state:
+It is initial state of an object,
+once we create an instanceof POJO class then the object enters into transient state
+
+2.Persistence state:
+As soon As the object associate with with the session it entered into
+the persistence state.
+Here, each object represents the row of table.
+
+3.Detached State.:
+as an object is no more assiciated with the databasechanges done in
+object entered into the detached state, detached object still has a represenation in database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

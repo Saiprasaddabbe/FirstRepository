@@ -1,0 +1,8 @@
+package com.masai.model;
+
+public class Collage {
+	private int collageId;
+	private String collageName;
+	private String collageAddress;
+
+}

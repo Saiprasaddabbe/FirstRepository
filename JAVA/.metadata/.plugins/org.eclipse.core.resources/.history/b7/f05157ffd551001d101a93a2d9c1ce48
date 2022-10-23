@@ -1,0 +1,20 @@
+package com.masai.usecase;
+
+
+
+import com.masai.EMUtility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,66 @@
+package com.masai.demo;
+
+import javax.persistence.EntityManager;
+
+import com.masai.model.Product;
+import com.masai.utility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+//		Product product1 = new Product();
+//		product1.setProductName("Shoes");
+//		product1.setPrice(599);
+//		product1.setQuantity(8);
+//		
+//		Product product2 = new Product();
+//		product2.setProductName("Shirt");
+//		product2.setPrice(499);
+//		product2.setQuantity(8);
+//		
+//		Product product3 = new Product();
+//		product3.setProductName("Jeans");
+//		product3.setPrice(899);
+//		product3.setQuantity(8);
+//		
+//		Product product4 = new Product();
+//		product4.setProductName("T-shirt");
+//		product4.setPrice(499);
+//		product4.setQuantity(8);
+//		
+//		Product product5 = new Product();
+//		product5.setProductName("blazer");
+//		product5.setPrice(1500);
+//		product5.setQuantity(8);
+//		
+//		
+//		em.getTransaction().begin();
+//		em.persist(product1);
+//		em.persist(product2);
+//		em.persist(product3);
+//		em.persist(product4);
+//		em.persist(product5);
+//		em.getTransaction().commit();
+
+		String jpql = "select p.name,p.quantity from Product p";
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		em.close();
+		
+		
+		
+		
+		
+
+	}
+
+}

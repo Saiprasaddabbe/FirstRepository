@@ -1,0 +1,33 @@
+package com.masai.usecase;
+
+import javax.persistence.EntityManager;
+
+import com.masai.EMUtility.EMUtil;
+import com.masai.model.Address;
+import com.masai.model.Employee;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+		
+		Employee employee = new Employee();
+		employee.setEname("Sai");
+		employee.setSalary(100000);
+		employee.setAddr(new Address("state1","city1","pincode-1"));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,11 @@
+Q2) Explain the difference between Checked and Unchecked exceptions. write some
+examples of checked and unchecked exception classes.
+
+->
+Checked exceptions are exceptions which are must checked or need to handle before compilation. If you dont handle these type
+of exceptions then dot class file will not generate.
+examples :- ClassNotFoundException, FileNotFoundException.
+
+Unchecked exceptions are exceptions which need not to be handle before compilation it can be ignored and your dot class file
+will get gnerate.
+examples :- NullPointerException, ArrayOutOfBoundIndexException.

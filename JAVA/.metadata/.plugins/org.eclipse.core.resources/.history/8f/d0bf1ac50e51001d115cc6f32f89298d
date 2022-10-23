@@ -1,0 +1,22 @@
+package com.masai.usecase;
+
+import javax.persistence.EntityManager;
+
+import com.masai.EMUtility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em =  EMUtil.provideEntityManager();
+		
+		String jpql = "select a from account where name='suraj'";
+		em.createQuery(jpql,Account.class);
+
+		
+		
+		
+		
+	}
+
+}

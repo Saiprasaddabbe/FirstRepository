@@ -1,0 +1,38 @@
+package com.masai.demo;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import com.masai.entity.Department;
+import com.masai.entity.Employee;
+import com.masai.utility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+		
+		Employee emp1 = new Employee();
+		emp1.setName("Saiprasad");
+		emp1.setSalary(100000);
+		
+		String jpql = "from Department where dname =:n";
+        TypedQuery<Department> q = em.createQuery(jpql,Department.class);
+	    q.setParameter("n", "HR");
+        Department dept = q.getSingleResult();
+        System.out.println(dept);
+	    
+		
+	    
+	    
+	    
+	    em.close();
+		
+		
+		
+		
+		
+	}
+
+}

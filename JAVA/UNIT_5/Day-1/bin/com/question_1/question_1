@@ -1,0 +1,19 @@
+Q1>Explain difference between PriorityQueue() and LinkedList()
+--->A queue is an ordered list of elements. It always works in first
+ in first out(FIFO) fashion. All the elements get inserted at the 
+ REAR and removed from the FRONT of the queue. In implementation of 
+ the static Queue, an array will be used so all operation of queue
+  are index based which makes it faster for all operations except 
+  deletion because deletion requires shifting of all the remaining 
+  elements to the front by one position.
+  A Static Queue is a queue of fixed size implemented using array.
+  
+  A linked list is also an ordered list of elements. You can 
+  add an element anywhere in the list, change an element anywhere 
+  in the list, or remove an element from any position in the list.
+   Each node in the list stores the content and a pointer or reference 
+   to the next node in the list. To store a single linked list, only the
+    reference or pointer to the first node in that list must be stored. 
+    The last node in a single 
+  linked list points to nothing (or null).
+  

@@ -1,0 +1,24 @@
+package com.masai.usecase;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import com.masai.EMUtility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+
+		String jpql = "select a.salary from Account a ";
+		TypedQuery<Object[]> q = em.createQuery(jpql,Object[].class);
+		List<Object[]>list = q.getResultList();
+        list.forEach(s->System.out.println(s));		
+
+	}
+
+}

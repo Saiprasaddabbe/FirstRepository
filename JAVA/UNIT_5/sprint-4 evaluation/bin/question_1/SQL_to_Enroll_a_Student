@@ -1,0 +1,60 @@
+1.Write a SQL to enroll Amit in Java and Spring.
+
+>insert into student_course values(12,101);
+>insert into student_course values(12,101);
+
+2.Write a SQL to enroll Venkat in Java and React.
+>insert into student_course values(11,101);
+>insert into student_course values(11,103);
+
+3.Write a SQL to enroll Raj in Spring and Angular.
+>insert into student_course values(13,102);
+>insert into student_course values(13,105);
+
+4.Write a SQL to enroll Suresh in Java, Hibernate and React.
+>insert into student_course values(15,101);
+>insert into student_course values(15,104);
+>insert into student_course values(15,103);
+
+5.Write a SQL to enroll Binay in React.
+>insert into student_course values(14,103);
+
+Student table
++------+--------+---------+------------+
+| roll | name   | address | mobile     |
++------+--------+---------+------------+
+|   11 | Venkat | pune    | 1234567890 |
+|   12 | Amit   | delhi   | 234567890  |
+|   13 | Raj    | kolkata | 34567890   |
+|   14 | Binay  | mumbai  | 568945610  |
+|   15 | Suresh | patna   | 5648752130 |
++------+--------+---------+------------+
+
+Course table
++------+--------+---------+------------+
+| roll | name   | address | mobile     |
++------+--------+---------+------------+
+|   11 | Venkat | pune    | 1234567890 |
+|   12 | Amit   | delhi   | 234567890  |
+|   13 | Raj    | kolkata | 34567890   |
+|   14 | Binay  | mumbai  | 568945610  |
+|   15 | Suresh | patna   | 5648752130 |
++------+--------+---------+------------+
+
+Student_Course table:-
++------+------+
+| roll | cid  |
++------+------+
+|   12 |  101 |
+|   11 |  101 |
+|   11 |  103 |
+|   13 |  102 |
+|   13 |  105 |
+|   15 |  101 |
+|   15 |  104 |
+|   15 |  103 |
+|   14 |  103 |
++------+------+
+
+
+

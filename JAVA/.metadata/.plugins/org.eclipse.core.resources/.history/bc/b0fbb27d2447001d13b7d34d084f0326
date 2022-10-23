@@ -1,0 +1,37 @@
+package com.masai.dao;
+
+import com.masai.entity.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public void save(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getAddressOfEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String giveBonusToEmployee(int empId, int bonus) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+	
+	
+	
+	
+	
+}

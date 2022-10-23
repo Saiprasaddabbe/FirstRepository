@@ -1,0 +1,16 @@
+package com.masai.demo;
+
+import com.masai.model.Customer;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		Customer customer = new Customer();
+		
+		
+		
+		
+	}
+
+}

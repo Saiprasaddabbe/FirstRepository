@@ -1,0 +1,25 @@
+Q5) Explain Difference between Upper Bounded Wildcards and Lower Bounded Wildcards with Example.
+The purpose of upper bounded wildcards is to decrease the restrictions on a variable. It
+restricts the unknown type to be a specific type or a subtype of that type. It is used by
+declaring wildcard character ("?") followed by the extends (in case of, class) or
+implements (in case of, interface) keyword, followed by its upper bound.
+Syntax:
+List<? extends Number>
+here ? is a wildcard character and Number is a predefined java class belongs to
+java.lang package.
+
+Lower Bounded Wildcards:
+The purpose of lower bounded wildcards is to restrict the unknown type to be a specific
+type or a supertype of that type. It is used by declaring wildcard character ("?") followed
+by the super keyword, followed by its lower bound.
+Day12: Map, Arrays and Collections classes, Iterator, Generics, Queue, Priority Queue 22
+Syntax:
+List<? super Integer>
+Suppose, we want to write the method for the list of Integer and its supertype (like
+Number, Object). Using List<? super Integer> is suitable for a list of type Integer or
+any of its superclasses whereas List<Integer> works with the list of type Integer only.
+So, List<? super Integer> is less restrictive than List<Integer>
+
+
+Example: specifying the lower bound wildcards to write the method for List<Integer>
+and List<Number>.

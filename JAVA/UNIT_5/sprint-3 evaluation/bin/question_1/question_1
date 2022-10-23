@@ -1,0 +1,54 @@
+Q1/- Explain the meaning of the deadlock in multithreaded application, when it can occur in
+multithreading applications.Write one example of deadlock.
+
+-->
+A lock without key is nothing but a deadlock.
+Deadlock is a condition happens in java when two synchronised threads are
+waiting each other forever. then deadlock happens..
+the synchronized keyword is the main reason for deadlock condition.
+
+example for deadlock:
+
+class A extends Thread{
+@Override
+void run(){
+synchronized(this){
+this.wait();
+this.notify();
+}
+
+}
+
+}
+class B extends Thread{
+
+@Override
+void run(){
+synchronized(this){
+this.wait();
+this.notify();
+}
+}
+class Main{
+
+public static void main(String[] args){
+Thread t1 = new Thread(new A());
+Thread t2 = new Thread(new B());
+t1.start();
+t2.start();
+
+}
+
+}
+
+In the above condition deadlock will happen...!
+
+
+
+
+
+
+
+
+
+

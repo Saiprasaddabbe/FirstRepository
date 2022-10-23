@@ -1,0 +1,14 @@
+package com.masai.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Student {
+	private int studentRoll;
+	private String studentName;
+	private String mobileNumber;
+	private String email;
+	
+	
+	
+}

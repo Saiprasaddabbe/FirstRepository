@@ -1,0 +1,15 @@
+Q1>What are the advantages of using Hibernate over JDBC?
+-->
+1.hibernate is good in mapping data to database using XML files.
+So, developer need not write code for this. JDBC supports only  native sql.
+
+2. Hibernate query langage and  supports polymorphic queries also,
+it also Supports native sql.
+
+3.Hibernate code will work very well for all databases for ex:-Oracle, MySql,postGragrel. etc.
+but JDBC is data Specific.
+
+4.No complete kowlege of sql is needed in hibernate, 
+the data can be stored in cache,for better performance,where as in JDBC, the java cache,is To be implemented.
+
+

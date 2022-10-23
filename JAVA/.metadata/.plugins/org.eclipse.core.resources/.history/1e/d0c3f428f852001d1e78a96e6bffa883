@@ -1,0 +1,33 @@
+package com.masai.demo;
+
+import com.masai.model.Collage;
+import com.masai.model.Student;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		Collage c1 = new Collage();
+		c1.setCollageName("c1");
+		c1.setCollageAddress("pune");
+		
+		Student s1 = new Student();
+		s1.setStudentName("s1");
+		s1.setEmail("s1@gmail.com");
+		s1.setMobileNumber("mob1");
+	
+		
+		
+		
+		
+		
+		Collage c2 = new Collage();
+		c2.setCollageName("c2");
+		c2.setCollageAddress("mumbai");
+		
+		
+		
+		
+	}
+
+}

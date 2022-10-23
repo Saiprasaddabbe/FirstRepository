@@ -1,0 +1,7 @@
+Q4>
+Output will be = ACE;
+
+first try block will be execute, then in console print "A";
+next line is int num = 99/0; //this will give Arithmetic Exception because we cannot divide with Zero.
+so control will go to catch block where arithmetic exception will get catch and console print "C";
+then control direct jump to last line of main i.e //printing "E";

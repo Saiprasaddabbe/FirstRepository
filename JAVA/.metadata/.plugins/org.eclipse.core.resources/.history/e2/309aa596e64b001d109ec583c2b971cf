@@ -1,0 +1,49 @@
+package com.masai.model;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+public class Demo {
+
+	public static void main(String[] args) {
+       
+		EntityManager em = EMUtil.provideEntityManager();
+		Customer c1 = new Customer();
+		c1.setName("Sai");
+		c1.setMobileNumber("1234567890");
+		c1.setEmail("sai@gmail.com");
+		c1.getAddresses().add(new Address("state1", "city1", "5212420", "Home"));
+		c1.getAddresses().add(new Address("state2", "city2", "4568562", "Office"));
+		c1.getAddresses().add(new Address("state5", "city5", "4564462", "other"));
+		
+		Customer c2 = new Customer();
+		c2.setName("prasad");
+		c2.setMobileNumber("0987654321");
+		c2.setEmail("prasad@gmail.com");
+		c2.getAddresses().add(new Address("state3", "city3", "7856226", "Home"));
+		c2.getAddresses().add(new Address("state4", "city4", "7889546", "Office"));
+		c2.getAddresses().add(new Address("state6", "city6", "7845646", "other"));
+
+		em.getTransaction().begin();
+		em.persist(c1);
+		em.persist(c2);
+		em.getTransaction().commit();
+		System.out.println("Done..");
+		
+		String jpql = "select from emp_adr where cid=:cid";
+		TypedQuery<Address> q =  em.createQuery(jpql,Address.class);
+		
+		List<Address>result = q.getResultList();
+		result.forEach(s->System.out.println(s));
+		
+		
+		
+		
+		
+
+	}
+
+}

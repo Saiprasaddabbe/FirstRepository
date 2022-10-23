@@ -1,0 +1,19 @@
+package com.masai.App;
+
+import com.masai.dao.EmployeeDao;
+import com.masai.dao.EmployeeDaoImpl;
+import com.masai.entity.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Employee e1 = new Employee(11, "Sai", "pune",12000);
+		
+		
+		EmployeeDao ed = new EmployeeDaoImpl();
+		ed.save(e1);
+
+	}
+
+}

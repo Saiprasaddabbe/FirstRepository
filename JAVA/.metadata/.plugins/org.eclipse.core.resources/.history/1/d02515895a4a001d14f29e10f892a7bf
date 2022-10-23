@@ -1,0 +1,12 @@
+package com.masai.usecases;
+
+public class WithdrawUseCase {
+	
+	
+	public static void main(String[] args) {
+
+		
+		
+
+	}
+}

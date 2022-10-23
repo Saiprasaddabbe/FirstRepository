@@ -1,0 +1,19 @@
+mysql> create table Department
+    -> (
+    -> did int primary key,
+    -> dname varchar(12) not null,
+    -> location varchar(12) not null
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table Employee
+    -> (
+    -> empId int primary key,
+    -> ename varchar(12) not null,
+    -> address varchar(12) not null,
+    -> mobile varchar(12) not null,
+    -> salary int not null,
+    -> deptId int
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+

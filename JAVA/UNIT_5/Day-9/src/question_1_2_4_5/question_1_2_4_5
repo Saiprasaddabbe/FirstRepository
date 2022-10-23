@@ -1,0 +1,115 @@
+Q1/ What is the difference between a synchronized method and a synchronized block?
+-->
+Synchronized method:
+Synchronized method acquires a lock on the whole object. 
+This means no other thread can use any synchronized method in the whole object while the method is being run by one thread. 
+A synchronized method uses the method receiver as a lock, ‘this’ for non static methods and the enclosing class for static methods.
+Synchronized method always locks either on current object represented by class level lock, if its static synchronized method.  
+In case of synchronized method, lock is acquired by thread when it enter method and released when it leaves method, either normally or by throwing Exception.  
+For synchronized methods, the lock will be held throughout the method scope. 
+A synchronized static method will acquire a lock in the whole class object.  
+
+Synchronized block:
+Synchronized blocks acquire a lock in object between parentheses after the synchronized keyword. Meaning no other thread can acquire a lock on the locked object until the synchronized block exits.
+Synchronized blocks use the expression as a lock.  
+Synchronized block provide granular control over lock, as you can use arbitrary any lock to provide mutual exclusion to critical section code.  
+In case of synchronized block, thread acquires lock when they enter synchronized block and released when they leave synchronized block.  
+In the synchronized block, the lock is held only during that block scope also referred to as critical section. 
+A synchronized block inside a static method will acquire a lock in the object between parentheses.
+
+Q2/- What’s the difference between class lock and object lock?
+-->
+Object lock:
+It can be used when you want non-static method or non-static block of the code should be accessed by only one thread
+It should always be used to make non-static data thread safe.
+Every object the class may have their own lock
+
+class lock:
+It can be used when we want to prevent multiple threads to enter the synchronized block in any of all available instances on runtime
+It should always be used to make static data thread safe. 
+Multiple objects of class may exist but there is always one class’s class object lock available
+
+Q4/- What is a Race condition, How will you solve the Race condition,explain with an
+Example.
+Java is a multi-threaded programming language and there is a higher risk to occur race conditions. Because the
+same resource may be accessed by multiple threads at the same time and may change the data.
+A race-condition is a condition in which the critical section (a part of the program where shared memory is accessed)
+is concurrently executed by two or more threads. It leads to incorrect behavior of a program.
+In layman terms, a race condition can be defined as, a condition in which two or more threads compete together to
+get certain shared resources.
+For example, if thread A is reading data from the linked list and another thread B is trying to delete the same data.
+This process leads to a race condition that may result in run time error
+
+To solve the data inconsistency problem in java synchronized keyword is used.
+So the thread-safety is achieved and race condition is avoided by the help of synchronized keyword.
+
+class Common{
+public void fun1(String name){
+System.out.print("Welcome");
+try{
+Thread.sleep(1000);
+}
+catch(Exception ee){
+}
+System.out.println(name);
+}
+
+
+the above method fun1() is supposed to give the output as welcome and after one second print the supplied name.
+Now what will happen if two threads acts on this fun simultaneously.
+
+class ThreadA extends Thread{
+Common c;
+String name;
+public ThreadA(Common c,String name) {
+this.c=c;
+this.name=name;
+}
+@Override
+public void run() {
+c.fun1(name);
+}
+}
+class ThreadB extends Thread{
+Common c;
+String name;
+public ThreadB(Common c,String name) {
+this.c=c;
+this.name=name;
+}
+@Override
+public void run() {
+c.fun1(name);
+class ThreadA extends Thread{
+Common c;
+String name;
+public ThreadA(Common c,String name) {
+this.c=c;
+this.name=name;
+}
+@Override
+public void run() {
+c.fun1(name);
+}
+}
+Now the output will be Welcome Welcome Ram Shyam which is not expected.
+We can get the desired output if we avoid two thread acting on fun1() simultaneously.
+To achieve this requirement we need to make fun1() as synchronized.
+Note: The synchronized keyword applicable only for methods and blocks but not for variables and classes.
+If a method or block is declared as synchronized then at a time only one thread is allowed to execute that method or
+block on a given object so that data inconsistency problem will be resolved.
+The main advantage of the synchronized keyword is we can resolve data inconsistency problem. but the main
+disadvantage of the synchronized keyword is it increases waiting time of the threads and creates performance
+problem on it. hence if there is no specific requirement then it is never recommended to use the synchronized
+keyword.
+Example:
+checking seat availability method should be non-synchronized, where as book seat method should be
+synchronized
+Any method that changes the state of an object. i.e. add/updaxte/delete/replace method we should use as
+synchronized
+
+Q5/- What is the Difference between the sleep and join method?
+-->
+The join() method waits for a thread to die. In other words, it causes the currently running threads to stop executing until the thread it joins with completes its task.
+The sleep(long millis) method causes the currently executing thread to sleep for the specified number of milliseconds,
+

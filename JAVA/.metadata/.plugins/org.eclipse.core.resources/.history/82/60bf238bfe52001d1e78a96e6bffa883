@@ -1,0 +1,25 @@
+package com.masai.demo;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import com.masai.model.Collage;
+import com.masai.model.Student;
+import com.masai.utility.EMUtil;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.providEntityManager();
+        String jpql = "from Collage where collageId=:id";
+        TypedQuery<Collage> q =  em.createQuery(jpql,Collage.class);
+        q.setParameter("id", 1);
+        Collage collage = q.getSingleResult();
+        collage.getStudentList().forEach(s->System.out.println(s));
+ 	}
+
+}

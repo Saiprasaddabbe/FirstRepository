@@ -1,0 +1,48 @@
+package com.masai.demo;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import com.masai.model.Address;
+import com.masai.model.Customer;
+import com.masai.utility.EMUtil;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		EntityManager em = EMUtil.provideEntityManager();
+
+		Customer customer = new Customer();
+		customer.setName("Saiprasad");
+		customer.setEmail("saiprasaddabbe@gmail.com");
+		customer.setMobileNumber("7276757284");
+		customer.getAddresses().add(new Address("state1", "city1", "pincode-1", "home"));
+		customer.getAddresses().add(new Address("state2", "city2", "pincode-2", "office"));
+		customer.getAddresses().add(new Address("state3", "city3", "pincode-3", "current"));
+
+		em.getTransaction().begin();
+		em.persist(customer);
+		em.getTransaction().commit();
+		em.close();
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the cid");
+		int cid = sc.nextInt();
+
+		String jpql = "select c from cust_adr c where cust_id=:cid";
+		TypedQuery<Customer> q = em.createQuery(jpql, Customer.class);
+		q.setParameter("cid", cid);
+		Customer c =   q.getSingleResult();
+		System.out.println("CID: "+c.getCid());
+		System.out.println("Email: "+c.getEmail());
+		System.out.println("Mob No: "+c.getMobileNumber());
+		System.out.println("Addresses: "+c.getAddresses());
+		System.out.println("Done");
+
+	}
+
+}

@@ -1,0 +1,48 @@
+Q1)When should one use Maven?
+-->
+Maven is a tool that can now be used for building and managing any Java-based project. It makes the day-to-day
+work of Java developers easier and generally help with the comprehension of any Java-based project.
+Maven is a powerful project management tool that is based on POM (project object model). It is used for projects
+build, dependency and documentation.
+Dependency is defined as a state of needing something or someone.
+When you rely on coffee to get you through the day, this is an example of you having dependency on caffeine
+(coffee).
+In Maven, a dependency is just another archive—JAR, ZIP, and so on—which our current project needs in order
+to compile, build, test, and/or run. These project dependencies are collectively specified in the pom. xml file,
+inside of a <dependencies> tag.
+
+Q2)Explain the core concepts of Maven.
+-->
+Maven is based on the concept of project object model (POM) file.
+ POM is an XML file which contains project resources like source code, test code and 
+ dependencies (external JARs) etc.The POM file should be in the project’s root directory.
+
+Q4. Explain about the basic properties of pom.xml file.
+POM is an acronym for Project Object Model. The pom.xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc.
+Maven reads the pom.xml file, then executes the goal.
+Before maven 2, it was named as project.xml file. But, since maven 2 (also in maven 3), 
+it is renamed as pom.xml.
+
+Q6.What are the different types of Maven repositories?
+1. Local Repository
+2. Central Repository
+3. Remote Repository
+
+Q7.Explain what a Primary key, Candidate Key, Prime Attributes,
+and Non-prime Attributes is.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

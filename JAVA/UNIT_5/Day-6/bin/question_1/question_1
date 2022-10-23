@@ -1,0 +1,7 @@
+Q1>- Write down some predefined Functional interfaces in the java library at least 4
+interfaces, with their methods.
+
+1>Predicate : - public boolean test(T t){ };
+2>Consumer  : - public void accept(t t){  };
+3>Supplier  : - public T get() {  };
+4>Function  : - public R apply(t t) {};

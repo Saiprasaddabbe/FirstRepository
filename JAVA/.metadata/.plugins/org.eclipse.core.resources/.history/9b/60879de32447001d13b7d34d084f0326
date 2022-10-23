@@ -1,0 +1,42 @@
+package com.masai.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.masai.entity.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	
+	@Override
+	public void save(Employee emp) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("studentUnit");
+		EntityManager em = emf.createEntityManager();
+	}
+
+	@Override
+	public String getAddressOfEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String giveBonusToEmployee(int empId, int bonus) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+	
+	
+	
+	
+	
+}

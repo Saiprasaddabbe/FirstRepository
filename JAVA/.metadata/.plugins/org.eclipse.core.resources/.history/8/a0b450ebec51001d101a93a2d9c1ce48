@@ -1,0 +1,17 @@
+package com.masai.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Cust_Adr {
+
+	private int cust_id;
+	private String city;
+	private String pincode;
+	private String state;
+	private String type;
+	
+	
+	
+	
+}

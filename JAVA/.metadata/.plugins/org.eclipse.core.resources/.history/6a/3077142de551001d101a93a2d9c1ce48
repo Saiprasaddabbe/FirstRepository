@@ -1,0 +1,22 @@
+package com.masai.demo;
+
+import com.masai.model.Address;
+import com.masai.model.Customer;
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		Customer customer = new Customer();
+		customer.setName("Saiprasad");
+		customer.setEmail("saiprasaadd@gmail.com");
+		customer.setMobileNumber("7276757284");
+		customer.getAddresses().add(new Address("state1", "city1", "pincode-1", "home"));
+		customer.getAddresses().add(new Address("state2", "city2", "pincode-2", "office"));
+		customer.getAddresses().add(new Address("state3", "city3", "pincode-3", "current"));
+
+		
+		
+	}
+
+}

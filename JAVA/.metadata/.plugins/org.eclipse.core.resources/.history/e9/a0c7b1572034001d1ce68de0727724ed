@@ -1,0 +1,7 @@
+package question_2;
+
+public class Student {
+int roll;
+int marks;
+String name;
+}
